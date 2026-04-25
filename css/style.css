@@ -165,3 +165,23 @@ body {
   font-size: 1.4rem;
   margin-top: 1rem;
 }
+
+.hero__btn {
+  margin-top: 2rem;
+  border: none;
+  transition: var(--transition);
+  padding: var(--spacing-sm);
+  animation: pulso 1.5s infinite;
+}
+
+/* 
+*
+* Animaciones
+* 
+*/
+
+@keyframes pulso {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
