@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Raleway-Medium';
+  src: url("../assets/fonts/Raleway/static/Raleway-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Bebas-Neue';
+  src: url("../assets/fonts/Bebas-Neue/BebasNeue-Regular.ttf");
+}
+
+/* Global variables */
+
+:root {
+  /* Colores principales */
+  --color-primary: #ABCDEF;
+  --color-primary-light: #A7C5D0;
+  --color-primary-lighter: #ECF1F5;
+
+  /* Neutrales */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray: #a1a1a1;
+
+  /* Fondo */
+  --color-bg-main: #F5FAFF;
+  --color-bg-secondary: #ECF1F5;
+
+  /* Texto */
+  --text-color-main: #333333;
+  --text-color-light: #a1a1a1;
+  --text-color-white: #FFFFFF;
+
+  /* Layout */
+  --max-width: 1200px;
+  --border-radius: 20px;
+
+  /* Spacing*/
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+
+  /* Transiciones */
+  --transition: all 0.5s ease;
+}
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Raleway-Medium';
+}
+
+/* Style home */
+.home {
+  position: relative;
+  
+  background: url("../assets/images/background.jpg") no-repeat center center/cover fixed; /* Permite tener imagen de fondo*/
+
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  width: auto;
+  overflow-x: hidden;
+  color: var(--text-color-white);
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(59, 56, 56, 0.5);
+  
+  z-index: 1;
+}
+
+.navbar {
+  padding: var(--spacing-md);
+}
+
+.navbar-toggler {
+  background-color: rgba(193, 202, 217, 0.4);
+  backdrop-filter: blur(5px);
+  border: none;
+}
+
+.navbar-toggler:hover {
+  background-color: rgba(104, 147, 222, 0.4);
+}
+
+.offcanvas-header {
+  background-color: rgb(6, 0, 49);
+}
+
+.offcanvas-body {
+  background-color: rgb(4, 2, 23); 
+  justify-content: center;
+  text-align: center;
+}
+
+#id-body > ul li a.nav-link {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+#id-body > ul li a.nav-link:hover {
+  background-color: rgba(6, 0, 49, 0.808);
+  color: var(--color-primary-lighter);
+}
+
+.dropdown-menu {
+  border: solid 1px rgba(6, 0, 49, 0.214);
+  background-color: rgb(4, 2, 23);
+}
+
+.dropdown-item {
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.dropdown-item:hover {
+  background-color: rgba(6, 0, 49, 0.808);
+  color: var(--color-primary-lighter);
+}
